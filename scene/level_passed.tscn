@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://gntinf3fucyo"]
+
+[ext_resource type="Texture2D" uid="uid://oji76c6n7rx" path="res://UI/Level Passed.png" id="1_xwuoi"]
+[ext_resource type="FontFile" uid="uid://bbinbr25ygsop" path="res://UI/PixelifySans-VariableFont_wght.ttf" id="2_cdm21"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nvm7t"]
+texture = ExtResource("1_xwuoi")
+modulate_color = Color(0.42068434, 0.42068434, 0.42068434, 1)
+
+[node name="Level Passed" type="Control" unique_id=1513751655]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=903041552]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_nvm7t")
+
+[node name="Label" type="Label" parent="." unique_id=210915912]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -962.5
+offset_top = -180.0
+offset_right = 962.5
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_cdm21")
+theme_override_font_sizes/font_size = 300
+text = "Level Passed!"

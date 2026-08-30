@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://rt7cdqtk55tf"]
+
+[ext_resource type="Texture2D" uid="uid://cef3qxgifbncx" path="res://UI/Bg.png" id="1_fbr8y"]
+[ext_resource type="Script" uid="uid://b31hckvgg7l3q" path="res://UI/start.gd" id="1_ymgvx"]
+[ext_resource type="Texture2D" uid="uid://b8fy0126gj4k0" path="res://UI/New Piskel.png" id="2_vmxbn"]
+[ext_resource type="FontFile" uid="uid://bbinbr25ygsop" path="res://UI/PixelifySans-VariableFont_wght.ttf" id="4_xbvye"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6yav2"]
+texture = ExtResource("1_fbr8y")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+modulate_color = Color(0.35305238, 0.35305238, 0.35305238, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fbr8y"]
+texture = ExtResource("2_vmxbn")
+region_rect = Rect2(8, 5, 19, 21)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5hdo6"]
+texture = ExtResource("2_vmxbn")
+region_rect = Rect2(9, 38, 18, 20)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w6bct"]
+
+[node name="Start Page" type="Control" unique_id=1017385881]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1659606839]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6yav2")
+
+[node name="START" type="MarginContainer" parent="." unique_id=1829554318 node_paths=PackedStringArray("start")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -53.0
+offset_right = 200.0
+offset_bottom = 347.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ymgvx")
+start = NodePath("Button")
+
+[node name="Button" type="Button" parent="START" unique_id=1726061112]
+show_behind_parent = true
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_fbr8y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5hdo6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fbr8y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w6bct")
+
+[node name="Label" type="Label" parent="." unique_id=1799836461]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -362.0
+offset_top = -391.0
+offset_right = 362.0
+offset_bottom = -294.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_xbvye")
+theme_override_font_sizes/font_size = 200
+text = "Shroom Adventure"
+
+[connection signal="mouse_entered" from="START" to="START" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="START" to="START" method="_on_mouse_exited"]
+[connection signal="pressed" from="START/Button" to="START" method="_on_button_pressed"]

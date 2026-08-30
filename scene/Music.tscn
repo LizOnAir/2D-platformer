@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cf3kiwpo4joke"]
+
+[ext_resource type="AudioStream" uid="uid://c4jttgc5bqoph" path="res://asset/Damtaro - Start (freetouse.com).mp3" id="1_dhmm1"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1427566284]
+stream = ExtResource("1_dhmm1")
+autoplay = true
+bus = &"Music"

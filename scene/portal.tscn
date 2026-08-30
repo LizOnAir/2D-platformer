@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bqwbse6aw07p2"]
+
+[ext_resource type="Script" uid="uid://br02j3ooedifr" path="res://script/portal.gd" id="1_pno75"]
+[ext_resource type="Texture2D" uid="uid://dqmfkn5axb4wl" path="res://asset/portal.webp" id="2_cfsmh"]
+[ext_resource type="AudioStream" uid="uid://dqsjftt2ennmc" path="res://asset/ribhavagrawal-purchase-succesful-ingame-230550.mp3" id="3_cfsmh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvm7t"]
+size = Vector2(142.5, 298)
+
+[node name="Portal" type="Area2D" unique_id=1415199361]
+script = ExtResource("1_pno75")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1164279773]
+position = Vector2(-237.5, 225.5)
+scale = Vector2(0.50510204, 0.54387754)
+texture = ExtResource("2_cfsmh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1907292867]
+position = Vector2(-237.25, 253)
+shape = SubResource("RectangleShape2D_nvm7t")
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1879192986]
+stream = ExtResource("3_cfsmh")
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

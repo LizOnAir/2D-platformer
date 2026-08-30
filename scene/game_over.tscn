@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bvain680wr5ee"]
+
+[ext_resource type="Script" uid="uid://txqams5iqead" path="res://scene/game_over.gd" id="1_6pabp"]
+[ext_resource type="Texture2D" uid="uid://dju1rr5i7lkcj" path="res://UI/Plain background.png" id="1_ccer4"]
+[ext_resource type="Texture2D" uid="uid://i41mb5kw0nif" path="res://asset/dead.png" id="2_8u835"]
+[ext_resource type="FontFile" uid="uid://bbinbr25ygsop" path="res://UI/PixelifySans-VariableFont_wght.ttf" id="3_ftari"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6yav2"]
+texture = ExtResource("1_ccer4")
+modulate_color = Color(0.40275884, 0.40275884, 0.40275884, 1)
+
+[node name="GameOver" type="Control" unique_id=421113518]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6pabp")
+
+[node name="Panel" type="Panel" parent="." unique_id=1555126762]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6yav2")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=753684032]
+self_modulate = Color(0.6432552, 0.6432552, 0.6432552, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = 219.0
+offset_right = 16.0
+offset_bottom = 251.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(30, 30)
+pivot_offset = Vector2(15, 15)
+texture = ExtResource("2_8u835")
+
+[node name="Label" type="Label" parent="." unique_id=1975441581]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -610.5
+offset_top = -435.0
+offset_right = 610.5
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ftari")
+theme_override_font_sizes/font_size = 300
+text = "You died!"
+
+[node name="Label2" type="Label" parent="." unique_id=418784951]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -958.5
+offset_top = 106.0
+offset_right = 958.5
+offset_bottom = 466.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ftari")
+theme_override_font_sizes/font_size = 200
+text = "Press R to restart"

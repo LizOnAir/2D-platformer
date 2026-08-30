@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://ch7m4e83d64ho"]
+
+[ext_resource type="Script" uid="uid://cvkuxs28cdh5a" path="res://UI/hud.gd" id="1_4n7mi"]
+[ext_resource type="Texture2D" uid="uid://b7r4ttjgja3s8" path="res://asset/Health.png" id="1_yixhe"]
+
+[node name="HUD" type="CanvasLayer" unique_id=431305987]
+script = ExtResource("1_4n7mi")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1185183670]
+offset_left = 168.0
+offset_top = 141.0
+offset_right = 577.0
+offset_bottom = 254.0
+theme_override_constants/separation = 30
+
+[node name="health1" type="NinePatchRect" parent="HBoxContainer" unique_id=978660610]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_yixhe")
+region_rect = Rect2(10, 10, 13, 12)
+
+[node name="health2" type="NinePatchRect" parent="HBoxContainer" unique_id=2129055620]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_yixhe")
+region_rect = Rect2(10, 10, 13, 12)
+
+[node name="health3" type="NinePatchRect" parent="HBoxContainer" unique_id=1624558443]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_yixhe")
+region_rect = Rect2(10, 10, 13, 12)
+
+[node name="dead1" type="NinePatchRect" parent="HBoxContainer" unique_id=1497567765]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_yixhe")
+region_rect = Rect2(10, 42, 13, 12)
+
+[node name="dead2" type="NinePatchRect" parent="HBoxContainer" unique_id=1929087169]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_yixhe")
+region_rect = Rect2(10, 42, 13, 12)
+
+[node name="dead3" type="NinePatchRect" parent="HBoxContainer" unique_id=661302143]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_yixhe")
+region_rect = Rect2(10, 42, 13, 12)
